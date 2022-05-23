@@ -2,3 +2,93 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+body {
+    font-family: Helvetica, Sans-Serif;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+* {
+    color: white;
+}
+
+.title {
+    font-weight: 900;
+    font-size: 2em;
+}
+
+.text {
+    font-size: 1em;
+}
+
+.cta {
+    border: white 5px solid;
+    font-weight: 900;
+    font-size: 1.2em;
+    width: 250px;
+    padding: 1em 0em;
+    text-align: center;
+}
+
+.nav-guest {
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    height: 5vh;
+    align-items: center;
+}
+
+.nav-guest div {
+    width: 1400px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-guest div a {
+    font-weight: 900;
+}
+
+.guest-content {
+    height: 90vh;
+    width: 1400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.guest-textbox {
+    text-align: center;
+    width: 550px;
+}
+
+.guest-logo {
+    width: 250px;
+}
+
+.footer-guest {
+    display: flex;
+    justify-content: center;
+    height: 5vh;
+    align-items: center;
+}
+
+.footer-guest div {
+    width: 1400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer-guest div div {
+    width: 250px;
+}
+
+.footer-guest svg {
+    height: 20px;
+    width: 20px;
+    fill: white;
+}
