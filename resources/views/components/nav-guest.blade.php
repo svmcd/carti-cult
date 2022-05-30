@@ -1,5 +1,5 @@
 <div class="nav-guest">
     <div>
-        <a href="#"><div>LOGIN</div></a>
+        <a href="<?php echo route('login'); ?>"><div>LOGIN</div></a>
     </div>
 </div>

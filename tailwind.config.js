@@ -8,9 +8,14 @@ module.exports = {
     ],
 
     theme: {
+        colors: {
+            'red': '#D90101',
+            'white': '#FEFEFF',
+            'black': '#000001',
+        },
         extend: {
             fontFamily: {
-                sans: ['Nunito', ...defaultTheme.fontFamily.sans],
+                sans: ['Helvetica', 'Arial', 'sans-serif'],
             },
         },
     },

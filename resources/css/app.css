@@ -11,8 +11,20 @@ body {
     align-items: center;
 }
 
+nav * {
+    color: black;
+}
+
+input {
+    color: black;
+}
+
 * {
     color: white;
+}
+
+.header-logo {
+    height: 70px;
 }
 
 .title {
