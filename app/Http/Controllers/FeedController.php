@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Post;
 
 class FeedController extends Controller
 {
     public function feed(){
-        return view('feed');
+        $posts = Post::all();
+        return view('feed', ['posts' => $posts]);
     }
 }

@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\FeedController;
+use App\Http\Controllers\FeedAdminController;
+use App\Http\Controllers\ShareController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,10 +21,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('feed', [FeedController::class, 'feed'])->middleware(['auth'])->name('feed');;
+Route::prefix('/feed')->middleware(['auth'])->group(function(){
+    Route::get('/', [FeedController::class, 'feed'])->name('feed');
+    Route::resources([
+        'posts' => FeedAdminController::class,
+    ]);
+});
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
-
-require __DIR__.'/auth.php';
+Route::get('/share', [ShareController::class, 'share'],  function(){})->middleware(['auth'])->name('share');
+require __DIR__.'/auth.php'; 

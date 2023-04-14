@@ -14,7 +14,7 @@
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
     </head>
-    <body>
+    <body class="bg-black">
         @include('components.nav-guest')
         <div class="guest-content">
             {{ $slot }}
